@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>كتاب الذكريات الأسطوري | فـروحـة</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="hearts-bg" id="hearts-container"></div>
+
+    <header>
+        <h1>كتاب الذكريات الأسطوري 📖💖</h1>
+        <p>عرض تلقائي للذكريات.. استمتع بالرحلة ✨</p>
+    </header>
+
+    <div class="book-container" id="book-container">
+        <div class="book" id="book">
+            <!-- الغلاف الأمامي الملكي -->
+            <div class="page cover-page" style="z-index: 36;">
+                <i class="fa-solid fa-heart-circle-bolt"></i>
+                <h2>حكاية حبنا يا فـروحـة</h2>
+                <p>القصة الأجمل التي تُروى 🌹</p>
+            </div>
+            <!-- صفحات الصور والعبارات سيتم توليدها ديناميكياً -->
+        </div>
+    </div>
+
+    <div class="book-controls">
+        <button class="nav-btn" onclick="prevPage()"><i class="fa-solid fa-arrow-right"></i> السابق</button>
+        <button class="nav-btn" onclick="toggleAutoPlay()" id="autoplay-btn"><i class="fa-solid fa-pause"></i> إيقاف التلقائي</button>
+        <button class="nav-btn" onclick="nextPage()">التالي <i class="fa-solid fa-arrow-left"></i></button>
+    </div>
+
+    <!-- الأغنية الخلفية -->
+    <audio id="bg-music" loop>
+        <source src="فروحه/song.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- صوت تقليب الورق -->
+    <audio id="flip-sound">
+        <source src="https://www.soundjay.com/misc/sounds/page-turn-2.mp3" type="audio/mpeg">
+    </audio>
+
+    <div class="music-controller">
+        <button class="play-audio-btn" onclick="toggleMusic()">
+            <i class="fa-solid fa-play" id="audio-icon"></i>
+        </button>
+        <div class="music-info">
+            <span class="music-title">موسيقى الخلفية</span>
+            <span class="music-status" id="audio-status">متوقف</span>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
