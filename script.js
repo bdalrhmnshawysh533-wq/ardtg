@@ -63,7 +63,7 @@ for (let i = 1; i <= totalPhotos; i++) {
 
     page.innerHTML = `
         <div class="image-wrapper">
-            <img src="فروحه/photo${i}.jpg" alt="صورة ${i}" onerror="this.src='https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80'">
+            <img src="photo${i}.jpg" alt="صورة ${i}" onerror="this.src='https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80'">
         </div>
         <div class="page-caption">${phrase}</div>
         <div class="page-footer">
